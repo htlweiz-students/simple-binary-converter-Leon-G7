@@ -1,7 +1,15 @@
 namespace Converter {
     public class convert{
-
-        convertToInt32("", 2).ToString();
+        public int convert(string binarystring){
+            foreach (char c in binarystring)
+            {
+                result = result * 2;
+                if (c == '1')
+                    result += 1;
+            }
+            return result;
+        }
+        
 
     }
 }
