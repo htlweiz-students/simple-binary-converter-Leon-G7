@@ -1,6 +1,9 @@
 namespace Converter {
-    public class convert{
-        public int convert(string binarystring){
+    public class convert_01{
+        public int convert_class (string binarystring){
+
+            int result = 0;
+
             foreach (char c in binarystring)
             {
                 result = result * 2;
