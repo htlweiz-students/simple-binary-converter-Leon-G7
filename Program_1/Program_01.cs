@@ -1,22 +1,27 @@
-namespace program
+using System;
+
+class Program
 {
-    class program_01
+    static void Main()
     {
-        public static int Main(string[] args)
+        BinaryConverter converter = new BinaryConverter();
+
+        string binary = "";
+        while (true)
         {
-            Console.WriteLine("Bitte geben sie eine Binärzahö ein:");
             string input = Console.ReadLine();
 
-            for (int count = 0; count < input.Length; count++)
+            if (input == "0" || input == "1")
             {
-                if (input[count] != '0' && input[count] != '1')
-                {
-                    Console.WriteLine("Fehler! Bitte geben sie 0 oder 1 ein!");
-                    return 1;
-                }
+                binary = binary + input;
             }
-
-            return 0;
+            else
+            {
+                break;
+            }
         }
+
+        ulong result = converter.Convert(binary);
+        Console.WriteLine(result);
     }
 }
